@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Treasure map</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="but.css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.3/dist/paper.min.css">
+-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="flurry.js" type = "text/javascript"></script>
+
+</head>
+<body>
+
+<img id="scream" width="800" height="500"
+     src="./img/treasureMap.png">
+
+<div id="myCanv"></div>
+
+<button id="start">Start Game</button>
+
+
+<video id="video" width="720" height="480">
+    <source src="line4.mp4" type="video/mp4">
+</video>
+
+<img id="finalTreasure" src="./img/treasure.gif">
+
+<img id="book" src="./img/book.png">
+
+<img id="parrot" class="items" onclick="onClick()"
+     src="./img/parrot1.png" value="parrot" data-id="parrot">
+<img id="battle_ship" class="items" onclick="onClick()"
+     src="./img/battle_ship2.png" value="bs" data-id="battle_ship">
+<img id="bok"  class="items" onclick="onClick()"
+     src="./img/bok2.png" value="bok" data-id="bok">
+<img id="chest" class="items" onclick="onClick()"
+     src="./img/chest1.png" value="chest" data-id="chest">
+<img id="flag" class="items" onclick="onClick()"
+     src="./img/flag1.png" value="flag" data-id="flag">
+<img id="friend" class="items" onclick="onClick()"
+     src="./img/friend1.png" data-id="fried">
+<img id="gun" class="items" onclick="onClick()"
+     src="./img/gun1.png" data-id="gun">
+<img id="map" class="items" onclick="onClick()"
+     src="./img/map1.png" data-id="map">
+<img id="tree" class="items" onclick="onClick()"
+     src="./img/tree1.png" data-id="tree">
+
+<!--FOR BEGINNING-->
+<div style="display: none;" id="pop-outer0" class="pop-outer">
+    <div id="pop-inner0" class="pop-inner">
+        <h2>There's the rules...</h2>
+        <p class="story" id="firstStory">
+            You lost almost whole team in horrible storm,<br>
+            there is only you and Captain's parrot!<br>
+            You have to figure out how to steer the ship, sailor! <br>
+            You mast find the Spanish gold whatever it takes!<br>
+            Road can see on the map. The gold buried in desert island. <br>
+            Named as "Shri Lanka".. Find out how to rule this ship <br>
+            and do your mission!
+        </p>
+        <input type="submit" rel="curl-bottom-left" class="button curl-bottom-left">Curl Bottom Left</input>
+       <!-- <input id="btn0" type="submit" class="curl-bottom-left" value="Understood!">-->
+    </div>
+</div>
+
+<!--FOR FIRST STEP-->
+<div style="display: none;" id="pop-outer1" class="pop-outer">
+    <div id="pop-inner1" class="pop-inner">
+        <h2 id="firstH2">Choose three items for search</h2>
+        <p class="story">You need to choose three items </p>
+        <input id="btn1" type="submit" class="storyBtn" value="oK">
+    </div>
+</div>
+
+<!--FOR SECOND STEP-->
+<div style="display: none;" id="pop-outer2" class="pop-outer">
+    <div id="pop-inner2" class="pop-inner">
+        <button class="close">X</button>
+        <h2 id="secH2">We have just some jokes for You. Relax :)</h2>
+        <input id="btn2" type="submit" class="get-jokes" value="Get a joke">
+        <p class="joke">Q: What do ye call a pirate with two eyes and two legs?<br>
+            A: A rookie.</p>
+    </div>
+</div>
+
+<!-- Error msg -->
+<div style="display: none;" id="pop-outer3" class="pop-outer">
+    <div id="pop-inner3" class="pop-inner">
+        <h2>Wrong</h2>
+        <p class="story">No, that's not what you need!</p>
+        <input id="btn3" type="submit" class="storyBtn" value="I'll try harder">
+    </div>
+</div>
+<div style="display: none;" id="pop-outer4" class="pop-outer">
+    <div id="pop-inner4" class="pop-inner">
+        <h2>You did it!</h2>
+        <p class="story">Yes! Great job!</p>
+        <input id="btn4" type="submit" class="storyBtn" value="Moving on!">
+    </div>
+</div>
+<div style="display: none;" id="pop-outer5" class="pop-outer">
+    <div id="pop-inner5" class="pop-inner">
+        <h2>We found it!</h2>
+        <p class="story">Yes! Yes! You did it! We are RICH!!</p>
+        <input id="btn5" type="submit" class="storyBtn" value="Let's go drink!">
+    </div>
+</div>
+<div style="display: none;" id="pop-outer6" class="pop-outer1">
+    <div id="pop-inner6" class="pop-inner1">
+
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="canv.js"></script>
+<script src="begin.js"></script>
+<script src="borders.js"></script>
+<script src="first_step.js"></script>
+<script src="second_step.js"></script>
+<script src="final.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-11991680-4', 'ianlunn.github.io');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
+
+<!--https://api.jquery.com/animated-selector/
+https://www.youtube.com/watch?v=Nk4DB_w8vXc-->
