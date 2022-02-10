@@ -6,7 +6,6 @@
     <title>Treasure map</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleB.css">
    <!-- <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <!-- <link rel="stylesheet" href="https://unpkg.com/papercss@1.8.3/dist/paper.min.css">
@@ -22,11 +21,11 @@
 <body>
 
 <img id="scream" width="800" height="500"
-     src="./img/treasureMap.png">
+     src="./img/treasureMap1.png">
 
 <div id="myCanv"></div>
 
-<button id="start">Start Game</button>
+<button id="start" class="button-55" role="button">Start Game</button>
 
 
 <video id="video" width="720" height="480">
@@ -61,24 +60,27 @@
     <div id="pop-inner0" class="pop-inner">
         <h2>There's the rules...</h2>
         <p class="story" id="firstStory">
-            You lost almost whole team in horrible storm,<br>
-            there is only you and Captain's parrot!<br>
-            You have to figure out how to steer the ship, sailor! <br>
-            You mast find the Spanish gold whatever it takes!<br>
-            Road can see on the map. The gold buried in desert island. <br>
-            Named as "Shri Lanka".. Find out how to rule this ship <br>
-            and do your mission!
+            You Lost aLmost whoLe team In horrIbLe storm,<br>
+            there Is onLy you and Captain's parrot!<br>
+            You have to fIgure out how to steer the ship, saILor! <br>
+            You mast fInd the Spanish goLd whatever It taKes!<br>
+            Road can see on the map. The goLd buried in <br>
+            desert IsLand. Named as "ShrI LanKa".. <br>
+            Find out how to ruLe thIs shIp and do your mIssIon!
         </p>
-        <input type="submit" id="btn0" rel="curl-bottom-left" class="button curl-bottom-left">Curl Bottom Left</input>
+        <input type="submit" id="btn0" class="storyBtn" value="Understood!">
        <!-- <input id="btn0" type="submit" class="curl-bottom-left" value="Understood!">-->
     </div>
 </div>
-
+<p class="rules">AAA</p>
 <!--FOR FIRST STEP-->
 <div style="display: none;" id="pop-outer1" class="pop-outer">
     <div id="pop-inner1" class="pop-inner">
         <h2 id="firstH2">Choose three items for search</h2>
-        <p class="story">You need to choose three items </p>
+        <p class="story">You need to choose three items,<br>
+            what you'll take to find the Spanish gold. <br>
+            There's only one correct answer... <br>
+            otherwise you haven't any chance </p>
         <input id="btn1" type="submit" class="storyBtn" value="oK">
     </div>
 </div>
@@ -86,9 +88,9 @@
 <!--FOR SECOND STEP-->
 <div style="display: none;" id="pop-outer2" class="pop-outer">
     <div id="pop-inner2" class="pop-inner">
-        <button class="close">X</button>
-        <h2 id="secH2">We have just some jokes for You. Relax :)</h2>
-        <input id="btn2" type="submit" class="get-jokes" value="Get a joke">
+        <button id="close" class="storyBtn">X</button>
+        <h2 id="secH2">We have just joke for You:)</h2>
+        <input id="btn2" type="submit" class="storyBtn" value="Get a joke">
         <p class="joke">Q: What do ye call a pirate with two eyes and two legs?<br>
             A: A rookie.</p>
     </div>
@@ -121,7 +123,6 @@
 
     </div>
 </div>
-<p class="rule">AAAAAA</p>
 <script src="app.js"></script>
 <script src="canv.js"></script>
 <script src="begin.js"></script>
@@ -129,18 +130,11 @@
 <script src="first_step.js"></script>
 <script src="second_step.js"></script>
 <script src="final.js"></script>
-<!--
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-11991680-4', 'ianlunn.github.io');
-    ga('send', 'pageview');
-</script>-->
 </body>
 </html>
 
 <!--https://api.jquery.com/animated-selector/
-https://www.youtube.com/watch?v=Nk4DB_w8vXc-->
+https://www.youtube.com/watch?v=Nk4DB_w8vXc
+
+-->

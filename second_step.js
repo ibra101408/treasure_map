@@ -13,7 +13,7 @@ function second_step() {
 
             //console.log("")
         //});*/
-        $(".close").click(function () {
+        $("#close").click(function () {
             $("#pop-outer2").fadeOut('slow');
         });
     });

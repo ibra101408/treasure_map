@@ -3,7 +3,7 @@ var massive = [];
 var chosen = null;
 
 function onClick() {
-    $(document).ready(function () {
+    $(document).ready(function (searchElement, fromIndex) {
         $(".items").on('click', function (event) {
             $(this).addClass('shadow');
             chosen = $(this).closest('.items').data('id');
@@ -12,12 +12,11 @@ function onClick() {
 
         massive.push(chosen);
         massive = $.grep(massive, function (n) {
-            return n == 0 || n
+            return n === 0 || n
         }); // delete null from array//
         console.log("in massive - " + massive);
-
-        if (massive.length == 3) {
-            if (massive.includes("parrot" && "map" && "bok")) { ///there is bag
+        if (massive.length === 3) {
+               if (massive.includes("battle_ship", "bok", "map")) { ///there is bag
                 $(document).ready(function () {
                     $('#pop-outer4').fadeIn('slow');
                     $('#btn4').click(function (){

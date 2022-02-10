@@ -64,7 +64,7 @@ function notAllowed(){
         firstStep();
     }
 
-    if (position.left > 439 && position.left < 451 && position.top > 269 && position.top < 271 ) {
+    if (position.left > 439 && position.left < 466 && position.top > 269 && position.top < 271 ) {
         console.log("Second step!");
         second_step();
     }

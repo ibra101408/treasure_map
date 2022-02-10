@@ -53,21 +53,21 @@ $(function(){
         notAllowed();
 
         var position = $("#ball").position();
-        let poss = $( "#ball" ).last().text( "left: " + position.left +"......."+ ", top: " + position.top );
+        //let poss = $( "#ball" ).last().text( "left: " + position.left +"......."+ ", top: " + position.top );
         //console.log(poss.value);
 
         switch (e.keyCode){
 
-            case 37:
+            case 74:
                 $("#ball").css('left', position.left - 20 + 'px');
                 break;
-            case 38:
+            case 73:
                 $("#ball").css('top', position.top - 20 + 'px');
                 break;
-            case 39:
+            case 76:
                 $("#ball").css('left', position.left + 20 + 'px');
                 break;
-            case 40:
+            case 75:
                 $("#ball").css('top', position.top + 20 + 'px');
                 break;
         }
